@@ -8,7 +8,6 @@ import {
     getRecentHistory,
     saveMessage,
 } from "../services/message.service";
-import { error } from "node:console";
 
 export async function postChat(req: Request, res: Response) {
     const content = String(req.body?.content ?? "").trim();
