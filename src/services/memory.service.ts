@@ -6,7 +6,6 @@ export async function getFacts() {
   return prisma.userFact.findMany({ orderBy: { updatedAt: "desc" } });
 }
 
-// AI qaytargan new_facts ni tozalab, UPSERT qiladi
 export async function saveFacts(raw: unknown) {
   if (!Array.isArray(raw)) return;
 
